@@ -1,0 +1,265 @@
+<!--pages/country/America/Questionnaire.wxml-->
+<view class="pages">
+  <view class="Title">
+    <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}'  data-current = "0" bindtap='checkCurrent'>旅游</view>
+    <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}'  data-current = "1" bindtap='checkCurrent'>探亲</view>
+    <view class='tab  {{currentData == 2 ? "tabBorer" : ""}}'  data-current = "2" bindtap='checkCurrent'>商务</view>
+  </view>
+  <swiper current="{{currentData}}" class='swiper' duration="300" bindchange="bindchange">
+    <swiper-item class='swiper-item'>
+      <scroll-view class='swiper_con' scroll-y="true" enable-back-to-top="true" scroll-with-animation="true">
+          <view class="p"><text>一.	申请人需要准备的材料清单：</text></view>
+          <view class="li"><text>1. 有效护照彩色扫描件（以及出入境记录，签证页）；</text></view>
+          <view class="li"><text>2. 相片二张白底电子版；</text></view>
+          <view class="li"><text>3.	请完整填写申请人信息表</text></view>
+          <view class="lii"><text>配偶，子女，父母必填，兄弟姐妹如果较多或不清楚可不填</text></view>
+          <view class="li"><text>4. 身份证彩色扫描件</text></view>
+          <view class="li"><text>5. 申请人户口所在的家庭户口本（包括每一位家庭成员）彩色扫描件</text></view>
+          <view class="li"><text>6. 退休人士提供退休证扫描件</text></view>
+          <view class="li"><text>7. 申请人所在单位的准假信一份扫描件，需打印在公司信签纸并盖公章（格式见附件）</text></view>
+          <view class="li"><text>8. 工作单位的营业执照扫描件（每人必有），事业单位为企业登记证，执业许可证或组织机构代码</text></view>
+          <view class="lii"><text>申请人如果是公司的法定代表人或股东，请提供一份公司近三个月的税单复印件（税种不限）</text></view>
+          <view class="li"><text>9. 申请人必须提供本人资金证明复印件:</text></view>
+          <view class="lii2"><text>A. 活期流水为开户六个月以上且近一个月内银行卡有来往帐目，到出发前还存有5万元/人以上；</text></view>
+          <view class="lii2"><text>B. 定期存款为出发时还有3个月以上的有效期5万元以上；</text></view>
+          <view class="lii"><text>最好提供A项, 请勿于近期突然存入巨额资金,信用卡记录不可代替，必须为储蓄存款</text></view>
+          <view class="li"><text>10. 一份申请人或配偶的房产证或其它固定资产的扫描件(配偶请提供结婚证复印件)</text></view>
+          <view class="li"><text>11. 两夫妇同行必须提供一份结婚证书的扫描件</text></view>
+          <view class="li2"><text>12. 一张名片（如有，就提供）</text></view>
+          <view class="li2"><text>13.	澳洲亲戚的护照和准签信复印件及有澳洲亲属签名的邀请函(如有，请提供）</text></view>
+          <view class="li2"><text>14.	如有家属在澳洲读书，请提供在读证明扫描件，学校的录取通知书或者成绩单及准签信复印件，有签名的邀请函（如有，请提供）</text></view>
+          <view class="p"><text>二.若申请人是学生请增加提供如下材料：</text></view>
+          <view class="li"><text>1. 学生证扫描件</text></view>
+          <view class="li"><text>2. 在非学校放假期间赴澳大利亚，必须由校方提供批假信</text></view>
+          <view class="p"><text>三.若申请人是未滿18岁的未成年人请增加提供以下材料：</text></view>
+          <view class="li"><text>1. 孩子的出生证明，上面注明孩子和父母双方的姓名</text></view>
+          <view class="li"><text>2. 父母结婚证的复印件</text></view>
+          <view class="li"><text>3. 学校就读证明</text></view>
+          <view class="li"><text>4. 如孩子的父母中有一方，或双方都不随行，需提供：所有不随行父母的身份证扫描件及书面签名授权，留下手机号码，同意其孩子随配偶（或指定人士）赴澳</text></view>
+          <view class="p"><text>四.十年签证请增加提供如下材料：</text></view>
+          <view class="li"><text>1. 户口所在地出具的无犯罪记录证明</text></view>
+          <view class="li"><text>2. 体检证明</text></view>
+          <view class="li"><text>3. 预约录取指纹</text></view>
+          <view class="p"><text>五.材料类型：</text></view>
+          <view class="table">
+            <view class="tr">
+              <view class="th2">类型</view>
+              <view class="th2">材料类型</view>
+            </view>
+            <view class="tr">
+              <view class="tb2">一年</view>
+              <view class="tb2">电子版</view>
+            </view>
+            <view class="tr">
+              <view class="tb2">三年</view>
+              <view class="tb2">纸质版</view>
+            </view>
+            <view class="tr">
+              <view class="tb2">十年</view>
+              <view class="tb2">电子版</view>
+            </view>
+          </view>
+          <view class="p"><text>六.收费标准：</text></view>
+          <view class="table">
+            <view class="tr">
+              <view class="th">国家</view>
+              <view class="th">类型</view>
+              <view class="th">价格(人民币)/人</view>
+            </view>
+            <view class="tr">
+              <view class="tb">澳大利亚</view>
+              <view class="tb">一年签</view>
+              <view class="tb">1300</view>
+            </view>
+            <view class="tr">
+              <view class="tb">澳大利亚</view>
+              <view class="tb">三年签</view>
+              <view class="tb">1500</view>
+            </view>
+            <view class="tr">
+              <view class="tb">澳大利亚</view>
+              <view class="tb">十年签</view>
+              <view class="tb">签证费自付，服务费1000</view>
+            </view>
+          </view>
+          <view class="p"><text>七.附件：</text></view>
+          <view class="li"><text id="holiday" class="fileurl" bindtap="getFile">准假函样稿.doc</text></view>
+          <view class="li"><text id="info" class="fileurl" bindtap="getFile">600短签签证个人信息表.doc</text></view>
+          <view class="p"><text>八.联系方式：</text></view>
+          <view class="li"><text>电话：18810825395(微信同号)</text></view>
+          <view class="li"><text>邮件：1365124806@qq.com</text></view>
+      </scroll-view>
+    </swiper-item> 
+    <swiper-item class='swiper-item'>
+      <scroll-view class='swiper_con' scroll-y="true" enable-back-to-top="true" scroll-with-animation="true">
+          <view class="p"><text>一.	申请人需要准备的材料清单：</text></view>
+          <view class="li"><text>1. 有效护照彩色扫描件（以及出入境记录，签证页）；</text></view>
+          <view class="li"><text>2. 相片二张白底电子版；</text></view>
+          <view class="li"><text>3.	请完整填写申请人信息表</text></view>
+          <view class="lii"><text>配偶，子女，父母必填，兄弟姐妹如果较多或不清楚可不填</text></view>
+          <view class="li"><text>4. 身份证彩色扫描件</text></view>
+          <view class="li"><text>5. 申请人户口所在的家庭户口本（包括每一位家庭成员）彩色扫描件</text></view>
+          <view class="li"><text>6. 退休人士提供退休证扫描件</text></view>
+          <view class="li"><text>7. 申请人所在单位的准假信一份扫描件，需打印在公司信签纸并盖公章（格式见附件）</text></view>
+          <view class="li"><text>8. 工作单位的营业执照扫描件（每人必有），事业单位为企业登记证，执业许可证或组织机构代码</text></view>
+          <view class="lii"><text>申请人如果是公司的法定代表人或股东，请提供一份公司近三个月的税单复印件（税种不限）</text></view>
+          <view class="li"><text>9. 申请人必须提供本人资金证明复印件:</text></view>
+          <view class="lii2"><text>A. 活期流水为开户六个月以上且近一个月内银行卡有来往帐目，到出发前还存有5万元/人以上；</text></view>
+          <view class="lii2"><text>B. 定期存款为出发时还有3个月以上的有效期5万元以上；</text></view>
+          <view class="lii"><text>最好提供A项, 请勿于近期突然存入巨额资金,信用卡记录不可代替，必须为储蓄存款</text></view>
+          <view class="li"><text>10. 一份申请人或配偶的房产证或其它固定资产的扫描件(配偶请提供结婚证复印件)</text></view>
+          <view class="li"><text>11. 两夫妇同行必须提供一份结婚证书的扫描件</text></view>
+          <view class="li"><text>12. 探亲亲属给出的邀请函</text></view>
+          <view class="li"><text>13. 探亲亲属的澳洲绿卡和护照扫描件</text></view>
+          <view class="li2"><text>14. 一张名片（如有，就提供）</text></view>
+          <view class="li2"><text>15.	澳洲亲戚的护照和准签信复印件及有澳洲亲属签名的邀请函(如有，请提供）</text></view>
+          <view class="li2"><text>16.	如有家属在澳洲读书，请提供在读证明扫描件，学校的录取通知书或者成绩单及准签信复印件，有签名的邀请函（如有，请提供）</text></view>
+          <view class="p"><text>二.若申请人是学生请增加提供如下材料：</text></view>
+          <view class="li"><text>1. 学生证扫描件</text></view>
+          <view class="li"><text>2. 在非学校放假期间赴澳大利亚，必须由校方提供批假信</text></view>
+          <view class="p"><text>三.若申请人是未滿18岁的未成年人请增加提供以下材料：</text></view>
+          <view class="li"><text>1. 孩子的出生证明，上面注明孩子和父母双方的姓名</text></view>
+          <view class="li"><text>2. 父母结婚证的复印件</text></view>
+          <view class="li"><text>3. 学校就读证明</text></view>
+          <view class="li"><text>4. 如孩子的父母中有一方，或双方都不随行，需提供：所有不随行父母的身份证扫描件及书面签名授权，留下手机号码，同意其孩子随配偶（或指定人士）赴澳</text></view>
+          <view class="p"><text>四.十年签证请增加提供如下材料：</text></view>
+          <view class="li"><text>1. 户口所在地出具的无犯罪记录证明</text></view>
+          <view class="li"><text>2. 体检证明</text></view>
+          <view class="li"><text>3. 预约录取指纹</text></view>
+          <view class="p"><text>五.材料类型：</text></view>
+          <view class="table">
+            <view class="tr">
+              <view class="th2">类型</view>
+              <view class="th2">材料类型</view>
+            </view>
+            <view class="tr">
+              <view class="tb2">一年</view>
+              <view class="tb2">电子版</view>
+            </view>
+            <view class="tr">
+              <view class="tb2">三年</view>
+              <view class="tb2">纸质版</view>
+            </view>
+            <view class="tr">
+              <view class="tb2">十年</view>
+              <view class="tb2">电子版</view>
+            </view>
+          </view>
+          <view class="p"><text>六.收费标准：</text></view>
+          <view class="table">
+            <view class="tr">
+              <view class="th">国家</view>
+              <view class="th">类型</view>
+              <view class="th">价格(人民币)/人</view>
+            </view>
+            <view class="tr">
+              <view class="tb">澳大利亚</view>
+              <view class="tb">一年签</view>
+              <view class="tb">1300</view>
+            </view>
+            <view class="tr">
+              <view class="tb">澳大利亚</view>
+              <view class="tb">三年签</view>
+              <view class="tb">1500</view>
+            </view>
+            <view class="tr">
+              <view class="tb">澳大利亚</view>
+              <view class="tb">十年签</view>
+              <view class="tb">签证费自付，服务费1000</view>
+            </view>
+          </view>
+          <view class="p"><text>七.附件：</text></view>
+          <view class="li"><text id="holiday" class="fileurl" bindtap="getFile">准假函样稿.doc</text></view>
+          <view class="li"><text id="info" class="fileurl" bindtap="getFile">600短签签证个人信息表.doc</text></view>
+          <view class="p"><text>八.联系方式：</text></view>
+          <view class="li"><text>电话：18810825395(微信同号)</text></view>
+          <view class="li"><text>邮件：1365124806@qq.com</text></view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item class='swiper-item'>
+      <scroll-view class='swiper_con' scroll-y="true" enable-back-to-top="true" scroll-with-animation="true">
+          <view class="p"><text>一.	申请人需要准备的材料清单：</text></view>
+          <view class="li"><text>1. 有效护照彩色扫描件（以及出入境记录，签证页）；</text></view>
+          <view class="li"><text>2. 相片二张白底电子版；</text></view>
+          <view class="li"><text>3.	请完整填写申请人信息表</text></view>
+          <view class="lii"><text>配偶，子女，父母必填，兄弟姐妹如果较多或不清楚可不填</text></view>
+          <view class="li"><text>4. 身份证彩色扫描件</text></view>
+          <view class="li"><text>5. 申请人户口所在的家庭户口本（包括每一位家庭成员）彩色扫描件</text></view>
+          <view class="li"><text>6. 退休人士提供退休证扫描件</text></view>
+          <view class="li"><text>7. 申请人所在单位的准假信一份扫描件，需打印在公司信签纸并盖公章（格式见附件）</text></view>
+          <view class="li"><text>8. 工作单位的营业执照扫描件（每人必有），事业单位为企业登记证，执业许可证或组织机构代码</text></view>
+          <view class="lii"><text>申请人如果是公司的法定代表人或股东，请提供一份公司近三个月的税单复印件（税种不限）</text></view>
+          <view class="li"><text>9. 申请人必须提供本人资金证明复印件:</text></view>
+          <view class="lii2"><text>A. 活期流水为开户六个月以上且近一个月内银行卡有来往帐目，到出发前还存有5万元/人以上；</text></view>
+          <view class="lii2"><text>B. 定期存款为出发时还有3个月以上的有效期5万元以上；</text></view>
+          <view class="lii"><text>最好提供A项, 请勿于近期突然存入巨额资金,信用卡记录不可代替，必须为储蓄存款</text></view>
+          <view class="li"><text>10. 一份申请人或配偶的房产证或其它固定资产的扫描件(配偶请提供结婚证复印件)</text></view>
+          <view class="li"><text>11. 两夫妇同行必须提供一份结婚证书的扫描件</text></view>
+          <view class="li"><text>12. 在澳公司出具的邀请函扫描件</text></view>
+          <view class="li2"><text>14. 一张名片（如有，就提供）</text></view>
+          <view class="li2"><text>15.	澳洲亲戚的护照和准签信复印件及有澳洲亲属签名的邀请函(如有，请提供）</text></view>
+          <view class="li2"><text>16.	如有家属在澳洲读书，请提供在读证明扫描件，学校的录取通知书或者成绩单及准签信复印件，有签名的邀请函（如有，请提供）</text></view>
+          <view class="p"><text>二.若申请人是学生请增加提供如下材料：</text></view>
+          <view class="li"><text>1. 学生证扫描件</text></view>
+          <view class="li"><text>2. 在非学校放假期间赴澳大利亚，必须由校方提供批假信</text></view>
+          <view class="p"><text>三.若申请人是未滿18岁的未成年人请增加提供以下材料：</text></view>
+          <view class="li"><text>1. 孩子的出生证明，上面注明孩子和父母双方的姓名</text></view>
+          <view class="li"><text>2. 父母结婚证的复印件</text></view>
+          <view class="li"><text>3. 学校就读证明</text></view>
+          <view class="li"><text>4. 如孩子的父母中有一方，或双方都不随行，需提供：所有不随行父母的身份证扫描件及书面签名授权，留下手机号码，同意其孩子随配偶（或指定人士）赴澳</text></view>
+          <view class="p"><text>四.十年签证请增加提供如下材料：</text></view>
+          <view class="li"><text>1. 户口所在地出具的无犯罪记录证明</text></view>
+          <view class="li"><text>2. 体检证明</text></view>
+          <view class="li"><text>3. 预约录取指纹</text></view>
+          <view class="p"><text>五.材料类型：</text></view>
+          <view class="table">
+            <view class="tr">
+              <view class="th2">类型</view>
+              <view class="th2">材料类型</view>
+            </view>
+            <view class="tr">
+              <view class="tb2">一年</view>
+              <view class="tb2">电子版</view>
+            </view>
+            <view class="tr">
+              <view class="tb2">三年</view>
+              <view class="tb2">纸质版</view>
+            </view>
+            <view class="tr">
+              <view class="tb2">十年</view>
+              <view class="tb2">电子版</view>
+            </view>
+          </view>
+          <view class="p"><text>六.收费标准：</text></view>
+          <view class="table">
+            <view class="tr">
+              <view class="th">国家</view>
+              <view class="th">类型</view>
+              <view class="th">价格(人民币)/人</view>
+            </view>
+            <view class="tr">
+              <view class="tb">澳大利亚</view>
+              <view class="tb">一年签</view>
+              <view class="tb">1300</view>
+            </view>
+            <view class="tr">
+              <view class="tb">澳大利亚</view>
+              <view class="tb">三年签</view>
+              <view class="tb">1500</view>
+            </view>
+            <view class="tr">
+              <view class="tb">澳大利亚</view>
+              <view class="tb">十年签</view>
+              <view class="tb">签证费自付，服务费1000</view>
+            </view>
+          </view>
+          <view class="p"><text>七.附件：</text></view>
+          <view class="li"><text id="holiday" class="fileurl" bindtap="getFile">准假函样稿.doc</text></view>
+          <view class="li"><text id="info" class="fileurl" bindtap="getFile">600短签签证个人信息表.doc</text></view>
+          <view class="p"><text>八.联系方式：</text></view>
+          <view class="li"><text>电话：18810825395(微信同号)</text></view>
+          <view class="li"><text>邮件：1365124806@qq.com</text></view>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>

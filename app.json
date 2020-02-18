@@ -1,0 +1,20 @@
+{
+  "cloud": true,
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/country/country",
+    "pages/country/America/America",
+    "pages/country/Canada/Canada",
+    "pages/country/Australia/Australia",
+    "pages/country/Britain/Britain",
+    "pages/country/process/process"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Joying签证中心",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

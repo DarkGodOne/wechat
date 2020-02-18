@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<view class="Container">
+  <image class="welcome" src="../img/welcome.jpg"></image>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+    <test class="user-detail">{{detail}}</test>
+    <button class="user-button" bindtap='bindViewTap' type="primary" loading="{{loading}}" plain="{{plain}}" > 进入签证办理大厅 </button>
+  </view>
+</view>

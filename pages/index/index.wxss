@@ -1,0 +1,24 @@
+/**index.wxss**/
+.Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align:top;
+}
+
+.usermotto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40rpx;
+  font-size: 18pt;
+}
+.user-button {
+  margin-top: 20rpx;
+}
+.user-detail {
+  height: 200rpx;
+  width: 600rpx;
+  margin-top: 20rpx;
+  font-size: 10pt;
+}

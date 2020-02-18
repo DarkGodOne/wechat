@@ -1,0 +1,73 @@
+<!--pages/country/country.wxml-->
+<view class="pages">
+  <view class="Title">
+    <text>请选择您要办理签证的国家</text>
+  </view>
+
+  <view class="Container">
+    <view class="Country">
+      <image id="America" bindtap="getQuestionnaire" class="select-Country" src="{{AmericaImg}}"></image>
+      <text class="Country-name">美国</text>
+    </view>
+    <view class="Country">
+      <image id="Canada" bindtap="getQuestionnaire" class="select-Country" src="{{CanadaImg}}" mode="aspectFit"></image>
+      <text class="Country-name">加拿大</text>
+    </view>
+    <view class="Country">
+      <image id="Australia" bindtap="getQuestionnaire" class="select-Country" src="{{AustraliaImg}}" mode="aspectFit"></image>
+      <text class="Country-name">澳大利亚</text>
+    </view>
+  </view>
+
+  <view class="Container">
+    <view class="Country">
+      <image id="Britain" bindtap="getQuestionnaire" class="select-Country" src="{{BritainImg}}" mode="aspectFit"></image>
+      <text class="Country-name">英国</text>
+    </view>
+    <view class="Country">
+      <image id="NewZealand" bindtap="getQuestionnaire" class="select-Country" src="{{NewZealandImg}}"></image>
+      <text class="Country-name">新西兰</text>
+    </view>
+    <view class="Country">
+      <image id="Schengen" bindtap="getQuestionnaire" class="select-Country" src="{{SchengenImg}}" mode="aspectFit"></image>
+      <text class="Country-name">欧盟申根</text>
+    </view>
+  </view>
+  <view class="table">
+    <view class="tr">
+      <view class="th">国家</view>
+      <view class="th">类型</view>
+      <view class="th">价格(人民币)/人</view>
+    </view>
+    <view class="tr">
+      <view class="tb">美国</view>
+      <view class="tb">商务/探亲/旅游十年</view>
+      <view class="tb">1500</view>
+    </view>
+    <view class="tr">
+      <view class="tb">加拿大</view>
+      <view class="tb">商务/探亲/旅游十年</view>
+      <view class="tb">1500</view>
+    </view>
+    <view class="tr">
+      <view class="tb">英国</view>
+      <view class="tb">商务/探亲/旅游</view>
+      <view class="tb"><text>单次1300\n多次1500</text></view>
+    </view>
+    <view class="tr">
+      <view class="tb">澳大利亚</view>
+      <view class="tb">商务/探亲/旅游</view>
+      <view class="tb">一年1300，三年1500，十年签证费自付，服务费1000</view>
+    </view>
+    <view class="tr">
+      <view class="tb">新西兰</view>
+      <view class="tb">商务/探亲/旅游</view>
+      <view class="tb">五年多次1500</view>
+    </view>
+    <view class="tr">
+      <view class="tb">申根签证</view>
+      <view class="tb">商务/探亲/旅游</view>
+      <view class="tb">服务费300，签证费自付</view>
+    </view>
+  </view>
+</view>

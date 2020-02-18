@@ -1,0 +1,187 @@
+<!--pages/country/America/Questionnaire.wxml-->
+<view class="pages">
+  <view class="Title">
+    <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}'  data-current = "0" bindtap='checkCurrent'>旅游</view>
+    <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}'  data-current = "1" bindtap='checkCurrent'>探亲</view>
+    <view class='tab  {{currentData == 2 ? "tabBorer" : ""}}'  data-current = "2" bindtap='checkCurrent'>商务</view>
+  </view>
+  <swiper current="{{currentData}}" class='swiper' duration="300" bindchange="bindchange">
+    <swiper-item class='swiper-item'>
+      <scroll-view class='swiper_con' scroll-y="true" enable-back-to-top="true" scroll-with-animation="true">
+          <view class="notice"><text space="emsp">注意：\n  年龄在14周岁以下和80周岁（含）以上的人不需要到使馆面试；所有材料提供扫描件，面试时携带原件及复印件!!!</text></view>
+          <view class="p"><text>一.	申请人必须满足以下条件：</text></view>
+          <view class="li"><text>1.	原则上无拒签记录的当地居民；</text></view>
+          <view class="li"><text>2.	在单位负责某一方面业务。</text></view>
+          <view class="p"><text>二.	申请人必须提供以下真实资料：</text></view>
+          <view class="li"><text>1. 因私护照（含以前过期的旧护照，有效期超过在美预计停留期6个月以上，至少有一页空白的签证页）;</text></view>
+          <view class="li"><text>2. 照片:一张5.1cm*5.1cm，近三个月内拍摄的彩色免冠照片电子版（JPEG格式，小不超过240kb，要求将耳朵露出来，眼睛部分清晰，不戴有色眼镜）;</text></view>
+          <view class="li"><text>3. 个人近6个月的银行流水原件，每月有良好收入记录（需要体现账号信息和申请人姓名，并加盖银行公章）;</text></view>
+          <view class="li"><text>4. 自己或配偶的房产证、汽车行驶证、银行存款单;</text></view>
+          <view class="li"><text>5. 公司的任职证明原件（英文），工作胸卡、有工作证请务必携带，个人名片1张;</text></view>
+          <view class="li"><text>6．加盖公章的公司营业执照副本复印件（法人需要提供公司3个月税单）;</text></view>
+          <view class="li"><text>7．如果退休，请带退休证;</text></view>
+          <view class="li"><text>8. 全家出游照片；新婚夫妇最好能携带婚礼庆典时的照片（以人越多场景约热闹为好）;</text></view>
+          <view class="li"><text>9. 美（加）报名表，务必填写完整，清晰（申请表请联系我获取）;</text></view>
+          <view class="li"><text>10. 股票交割单、有价证券、工资收入单以及其他能证明个人财产状况的资料原件（可选）;</text></view>
+          <view class="li"><text>11. 学历证书原件，执业资格证书，职称证明原件，荣誉证书原件（可选）;</text></view>
+          <view class="li"><text>12. 在国外拍摄的背景为当地标志性建筑本人纪念照数张；无出国记录的可携带在国内旅游的照片（可选）。</text></view>
+          <view class="p"><text>三.	特定申请人(14岁以下儿童）：</text></view>
+          <view class="li"><text>1. 儿童出生证明副本;</text></view>
+          <view class="li"><text>2. 儿童旅美目的手写说明，包括美国邀请人的联系方式及其与该名儿童的关系;</text></view>
+          <view class="li"><text>3. 父母护照个人信息页或身份证复印件;</text></view>
+          <view class="li"><text>4. 父母当前和/或之前美国签证（如有）复印件;</text></view>
+          <view class="li"><text>5. 请注意，如果父母一方或双方亲自到使/领事馆申请签证（并非通过代传递服务），则父母需要以孩子的名义预约面谈，并在本人申请时递交孩子的申请。一名成年申请人面谈时可携带不多于五份未成年人申请，如果团组中有超过五名未成年人，则申请必须通过代传递服务进行提交。</text></view>
+          <view class="p"><text>四.免面试代传递须符合：</text></view>
+          <view class="li"><text>1.之前获得过美国签证;</text></view>
+          <view class="li"><text>2.之前获得签证的年龄必须在14岁以上，且必须采集过指纹;</text></view>
+          <view class="li"><text>3.必须为中国公民或居民;</text></view>
+          <view class="li"><text>4.必须本人在中国;</text></view>
+          <view class="li"><text>5.本次申请的签证类型必须和上次申请的签证类型相同;</text></view>
+          <view class="li"><text>6.您当前的签证必须有效或过期不超过48个月;</text></view>
+          <view class="li"><text>7.如果您的签证已注明“已接受过行政审理”则无法使用代传递业务;</text></view>
+          <view class="li"><text>8.如果包含美国签证（有效或到期）的护照遗失，则无法使用代传递业务;</text></view>
+          <view class="li"><text>9.如果您的护照上有两个失效签证，只要签证过期不超过48个月，您可以依据二者之一申请代传递业务;</text></view>
+          <view class="li"><text>10.如果是14岁以下和80岁（含）以上的申请人，如果没有美国签证拒签史，则可通过代传递申请签证</text></view>
+          <view class="p"><text>五.收费标准：</text></view>
+          <view class="table">
+            <view class="tr">
+              <view class="th">国家</view>
+              <view class="th">类型</view>
+              <view class="th">价格(人民币)/人</view>
+            </view>
+            <view class="tr">
+              <view class="tb">加拿大</view>
+              <view class="tb">旅游十年签</view>
+              <view class="tb">1500</view>
+            </view>
+          </view>
+          <view class="p"><text>六.报名表：</text></view>
+          <view class="li"><text id="America" class="fileurl" bindtap="getFile">美（加）报名表.doc</text>
+          <progress id="downloadProgress" class="{{showView?'show':'hide'}}" percent="{{progress}}"/></view>
+          <view class="p"><text>七.联系方式：</text></view>
+          <view class="li"><text>电话：18810825395(微信同号)</text></view>
+          <view class="li"><text>邮件：1365124806@qq.com</text></view>
+      </scroll-view>
+    </swiper-item> 
+    <swiper-item>
+      <scroll-view class='swiper_con' scroll-y="true" enable-back-to-top="true" scroll-with-animation="true">
+          <view class="notice"><text space="emsp">注意：\n  年龄在14周岁以下和80周岁（含）以上的人不需要到使馆面试；所有材料提供扫描件，面试时携带原件及复印件!!!</text></view>
+          <view class="p"><text>一.	申请人必须满足以下条件：</text></view>
+          <view class="li"><text>1.	原则上无拒签记录的当地居民；</text></view>
+          <view class="li"><text>2.	在单位负责某一方面业务。</text></view>
+          <view class="p"><text>二.	申请人必须提供以下真实资料：</text></view>
+          <view class="li"><text>1. 因私护照（含以前过期的旧护照，有效期超过在美预计停留期6个月以上，至少有一页空白的签证页）;</text></view>
+          <view class="li"><text>2. 照片:一张5.1cm*5.1cm，近三个月内拍摄的彩色免冠照片电子版（JPEG格式，小不超过240kb，要求将耳朵露出来，眼睛部分清晰，不戴有色眼镜）;</text></view>
+          <view class="li"><text>3. 个人近6个月的银行流水原件，每月有良好收入记录（需要体现账号信息和申请人姓名，并加盖银行公章）;</text></view>
+          <view class="li"><text>4. 自己或配偶的房产证、汽车行驶证、银行存款单;</text></view>
+          <view class="li"><text>5. 公司的任职证明原件（英文），工作胸卡、有工作证请务必携带，个人名片1张;</text></view>
+          <view class="li"><text>6．加盖公章的公司营业执照副本复印件（法人需要提供公司3个月税单）;</text></view>
+          <view class="li"><text>7．如果退休，请带退休证;</text></view>
+          <view class="li"><text>8. 全家出游照片；新婚夫妇最好能携带婚礼庆典时的照片（以人越多场景约热闹为好）;</text></view>
+          <view class="li"><text>9. 美（加）报名表，务必填写完整，清晰（申请表请联系我获取）;</text></view>
+          <view class="li"><text>10. 俩人在同一个户口本上的户口本，或是亲属关系公证;</text></view>
+          <view class="li"><text>11. 最近与美国亲属的合影;</text></view>
+          <view class="li"><text>12. 美国亲属的护照首页和签证页的复印件，或是美国绿卡的复印件;</text></view>
+          <view class="li"><text>13. 股票交割单、有价证券、工资收入单以及其他能证明个人财产状况的资料原件（可选）;</text></view>
+          <view class="li"><text>14. 学历证书原件，执业资格证书，职称证明原件，荣誉证书原件（可选）;</text></view>
+          <view class="li"><text>15. 在国外拍摄的背景为当地标志性建筑本人纪念照数张；无出国记录的可携带在国内旅游的照片（可选）。</text></view>
+          <view class="p"><text>三.	特定申请人(14岁以下儿童）：</text></view>
+          <view class="li"><text>1. 儿童出生证明副本;</text></view>
+          <view class="li"><text>2. 儿童旅美目的手写说明，包括美国邀请人的联系方式及其与该名儿童的关系;</text></view>
+          <view class="li"><text>3. 父母护照个人信息页或身份证复印件;</text></view>
+          <view class="li"><text>4. 父母当前和/或之前美国签证（如有）复印件;</text></view>
+          <view class="li"><text>5. 请注意，如果父母一方或双方亲自到使/领事馆申请签证（并非通过代传递服务），则父母需要以孩子的名义预约面谈，并在本人申请时递交孩子的申请。一名成年申请人面谈时可携带不多于五份未成年人申请，如果团组中有超过五名未成年人，则申请必须通过代传递服务进行提交。</text></view>
+          <view class="p"><text>四.免面试代传递须符合：</text></view>
+          <view class="li"><text>1.之前获得过美国签证;</text></view>
+          <view class="li"><text>2.之前获得签证的年龄必须在14岁以上，且必须采集过指纹;</text></view>
+          <view class="li"><text>3.必须为中国公民或居民;</text></view>
+          <view class="li"><text>4.必须本人在中国;</text></view>
+          <view class="li"><text>5.本次申请的签证类型必须和上次申请的签证类型相同;</text></view>
+          <view class="li"><text>6.您当前的签证必须有效或过期不超过48个月;</text></view>
+          <view class="li"><text>7.如果您的签证已注明“已接受过行政审理”则无法使用代传递业务;</text></view>
+          <view class="li"><text>8.如果包含美国签证（有效或到期）的护照遗失，则无法使用代传递业务;</text></view>
+          <view class="li"><text>9.如果您的护照上有两个失效签证，只要签证过期不超过48个月，您可以依据二者之一申请代传递业务;</text></view>
+          <view class="li"><text>10.如果是14岁以下和80岁（含）以上的申请人，如果没有美国签证拒签史，则可通过代传递申请签证</text></view>
+          <view class="p"><text>五.收费标准：</text></view>
+          <view class="table">
+            <view class="tr">
+              <view class="th">国家</view>
+              <view class="th">类型</view>
+              <view class="th">价格(人民币)/人</view>
+            </view>
+            <view class="tr">
+              <view class="tb">加拿大</view>
+              <view class="tb">探亲</view>
+              <view class="tb">1500</view>
+            </view>
+          </view>
+          <view class="p"><text>六.报名表：</text></view>
+          <view class="li"><text id="America" class="fileurl" bindtap="getFile">美（加）报名表.doc</text>
+          <progress id="downloadProgress" class="{{showView?'show':'hide'}}" percent="{{progress}}"/></view>
+          <view class="p"><text>七.联系方式：</text></view>
+          <view class="li"><text>电话：18810825395(微信同号)</text></view>
+          <view class="li"><text>邮件：1365124806@qq.com</text></view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view class='swiper_con' scroll-y="true" enable-back-to-top="true" scroll-with-animation="true">
+          <view class="notice"><text space="emsp">注意：\n  年龄在14周岁以下和80周岁（含）以上的人不需要到使馆面试；所有材料提供扫描件，面试时携带原件及复印件!!!</text></view>
+          <view class="p"><text>一.	申请人必须满足以下条件：</text></view>
+          <view class="li"><text>1.	原则上无拒签记录的当地居民；</text></view>
+          <view class="li"><text>2.	在单位负责某一方面业务。</text></view>
+          <view class="p"><text>二.	申请人必须提供以下真实资料：</text></view>
+          <view class="li"><text>1. 因私护照（含以前过期的旧护照，有效期超过在美预计停留期6个月以上，至少有一页空白的签证页）;</text></view>
+          <view class="li"><text>2. 照片:一张5.1cm*5.1cm，近三个月内拍摄的彩色免冠照片电子版（JPEG格式，小不超过240kb，要求将耳朵露出来，眼睛部分清晰，不戴有色眼镜）;</text></view>
+          <view class="li"><text>3. 个人近6个月的银行流水原件，每月有良好收入记录（需要体现账号信息和申请人姓名，并加盖银行公章）;</text></view>
+          <view class="li"><text>4. 自己或配偶的房产证、汽车行驶证、银行存款单;</text></view>
+          <view class="li"><text>5. 公司的任职证明原件（英文），工作胸卡、有工作证请务必携带，个人名片1张;</text></view>
+          <view class="li"><text>6．加盖公章的公司营业执照副本复印件（法人需要提供公司3个月税单）;</text></view>
+          <view class="li"><text>7．如果退休，请带退休证;</text></view>
+          <view class="li"><text>8. 全家出游照片；新婚夫妇最好能携带婚礼庆典时的照片（以人越多场景约热闹为好）;</text></view>
+          <view class="li"><text>9. 美（加）报名表，务必填写完整，清晰（申请表请联系我获取）;</text></view>
+          <view class="li"><text space="emsp">10.邀请函原件,要求使用公司正式的信头纸并加盖公章,签字,并须包含如下信息:\n a)任职公司的详细地址和联系人;\n b)签字人员的姓名和职务;\n c)访问的目的和持续时间;\n d)详细日程;\n e)支付旅行和生活费用的单位或个人;</text></view>
+          <view class="li"><text>11. 最近与美国亲属的合影;</text></view>
+          <view class="li"><text>12. 美国亲属的护照首页和签证页的复印件，或是美国绿卡的复印件;</text></view>
+          <view class="li"><text>13. 股票交割单、有价证券、工资收入单以及其他能证明个人财产状况的资料原件（可选）;</text></view>
+          <view class="li"><text>14. 学历证书原件，执业资格证书，职称证明原件，荣誉证书原件（可选）;</text></view>
+          <view class="li"><text>15. 在国外拍摄的背景为当地标志性建筑本人纪念照数张；无出国记录的可携带在国内旅游的照片（可选）。</text></view>
+          <view class="p"><text>三.	特定申请人(14岁以下儿童）：</text></view>
+          <view class="li"><text>1. 儿童出生证明副本;</text></view>
+          <view class="li"><text>2. 儿童旅美目的手写说明，包括美国邀请人的联系方式及其与该名儿童的关系;</text></view>
+          <view class="li"><text>3. 父母护照个人信息页或身份证复印件;</text></view>
+          <view class="li"><text>4. 父母当前和/或之前美国签证（如有）复印件;</text></view>
+          <view class="li"><text>5. 请注意，如果父母一方或双方亲自到使/领事馆申请签证（并非通过代传递服务），则父母需要以孩子的名义预约面谈，并在本人申请时递交孩子的申请。一名成年申请人面谈时可携带不多于五份未成年人申请，如果团组中有超过五名未成年人，则申请必须通过代传递服务进行提交。</text></view>
+          <view class="p"><text>四.免面试代传递须符合：</text></view>
+          <view class="li"><text>1.之前获得过美国签证;</text></view>
+          <view class="li"><text>2.之前获得签证的年龄必须在14岁以上，且必须采集过指纹;</text></view>
+          <view class="li"><text>3.必须为中国公民或居民;</text></view>
+          <view class="li"><text>4.必须本人在中国;</text></view>
+          <view class="li"><text>5.本次申请的签证类型必须和上次申请的签证类型相同;</text></view>
+          <view class="li"><text>6.您当前的签证必须有效或过期不超过48个月;</text></view>
+          <view class="li"><text>7.如果您的签证已注明“已接受过行政审理”则无法使用代传递业务;</text></view>
+          <view class="li"><text>8.如果包含美国签证（有效或到期）的护照遗失，则无法使用代传递业务;</text></view>
+          <view class="li"><text>9.如果您的护照上有两个失效签证，只要签证过期不超过48个月，您可以依据二者之一申请代传递业务;</text></view>
+          <view class="li"><text>10.如果是14岁以下和80岁（含）以上的申请人，如果没有美国签证拒签史，则可通过代传递申请签证</text></view>
+          <view class="p"><text>五.收费标准：</text></view>
+          <view class="table">
+            <view class="tr">
+              <view class="th">国家</view>
+              <view class="th">类型</view>
+              <view class="th">价格(人民币)/人</view>
+            </view>
+            <view class="tr">
+              <view class="tb">加拿大</view>
+              <view class="tb">商务</view>
+              <view class="tb">1500</view>
+            </view>
+          </view>
+          <view class="p"><text>六.报名表：</text></view>
+          <view class="li"><text id="America" class="fileurl" bindtap="getFile">美（加）报名表.doc</text>
+          <progress id="downloadProgress" class="{{showView?'show':'hide'}}" percent="{{progress}}"/></view>
+          <view class="p"><text>七.联系方式：</text></view>
+          <view class="li"><text>电话：18810825395(微信同号)</text></view>
+          <view class="li"><text>邮件：1365124806@qq.com</text></view>
+      </scroll-view>
+    </swiper-item>  
+  </swiper>
+</view>

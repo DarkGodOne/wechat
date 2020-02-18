@@ -1,0 +1,7 @@
+<view class="pages">
+  <view class="Title">
+    <text>流程描述</text>
+    <button bindtap="process" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}">确认</button>
+  </view>
+</view>
