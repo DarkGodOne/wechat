@@ -1,0 +1,9 @@
+<!--pages/carControl/carControl.wxml-->
+<view class="relative">
+  <input class="staticText" type="text" value="距离：{{distance}}" disabled/>
+  <!-- 背景图片 -->
+  <image style="width: 100px; height: 100px;" class="pic_background" src="../img/out.jpg"></image>
+  <!-- 摇杆图片 -->
+  <image style="width: 80px; height: 80px;position: absolute;left:{{leftLooks}}px;top:{{topLooks}}px;" bindtouchend='ImageReturn' bindtouchmove='ImageTouchMove' class="pic_tou" src="../img/in.jpg" bindtap="ImageTouch"></image>
+</view>
+

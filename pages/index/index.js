@@ -10,14 +10,21 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     disabled: false,
-    loading: false,
+    loading1: false,
+    loading2: false,
     src: ""
   },
   //事件处理函数
   bindViewTap: function() {
-    this.setData({ disabled: true,loading: true});
+    this.setData({ disabled: true,loading1: true});
     wx.navigateTo({
       url: '../country/country'
+    })
+  },
+  carControl: function () {
+    this.setData({ disabled: true, loading2: true });
+    wx.navigateTo({
+      url: '../carControl/carControl'
     })
   },
   onLoad: function () {
@@ -27,6 +34,6 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.setData({ disabled: false, loading: false });
+    this.setData({ disabled: false, loading1: false, loading2: false });
   }
 })

@@ -8,7 +8,8 @@
     "pages/country/Canada/Canada",
     "pages/country/Australia/Australia",
     "pages/country/Britain/Britain",
-    "pages/country/process/process"
+    "pages/country/process/process",
+    "pages/carControl/carControl"
   ],
   "window": {
     "backgroundTextStyle": "light",
