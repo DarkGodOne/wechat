@@ -158,16 +158,16 @@ Page({
       topLooks: movePos.posY
     })
     
-    if (movePos.posX > (self.data.StartX+10)){
+    if (movePos.posX > (self.data.StartX+20)){
       self.turn=1;
-    }else if(movePos.posX < (self.data.StartX-10)){
+    }else if(movePos.posX < (self.data.StartX-20)){
       self.turn=-1;
     }else{
       self.turn=0;
     }
-    if (movePos.posY > (self.data.StartY+10)){
+    if (movePos.posY > (self.data.StartY+20)){
       self.direct=-1;
-    }else if(movePos.posY < (self.data.StartY-10)){
+    }else if(movePos.posY < (self.data.StartY-20)){
       self.direct=1;
     }else{
       self.direct=0;
